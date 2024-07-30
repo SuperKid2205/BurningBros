@@ -29,11 +29,6 @@ public class UserService {
         if (theUser == null) {
             throw new UsernameNotFoundException("User not found");
         }
-//        return org.springframework.security.core.userdetails.User.builder()
-//                .username(theUser.getUsername())
-//                .password(theUser.getPassword())
-//                //.roles(theUser.getRoles())
-//                .build();
         return theUser;
         
     }

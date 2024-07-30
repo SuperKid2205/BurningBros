@@ -46,27 +46,6 @@ public class SecurityConfig {
         return configuration.getAuthenticationManager();
     }
 
-//    @Bean
-//    SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//
-//        httpSecurity.authorizeHttpRequests(
-//                (auth) -> {
-//                    auth.requestMatchers("/api/users","/api/login").permitAll();
-////                  auth.requestMatchers("/api/admin/**").hasRole("ADMIN");
-////                  auth.requestMatchers("/api/user/**").hasAnyRole("ADMIN","USER");
-//                  auth.requestMatchers("/api/admin/**").permitAll();
-//                  auth.requestMatchers("/api/user/**").permitAll();
-//                    auth.anyRequest().authenticated();
-//                    
-//                })
-//                .csrf(csrf -> {
-//                    csrf.ignoringRequestMatchers("/api/**");
-//                })
-//        ;
-//
-//        return httpSecurity.build();
-//    }
-    
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 

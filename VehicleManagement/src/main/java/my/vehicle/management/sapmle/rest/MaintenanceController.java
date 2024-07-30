@@ -23,23 +23,6 @@ public class MaintenanceController {
     @Autowired
     private UserService userService;
     
-//    @PostMapping("/user/vehicles/{vehicleId}/maintenance")
-//    public ResponseEntity<Maintenance> addMaintenanceRecord(
-//              @PathVariable Long vehicleId
-//            , @RequestBody Maintenance record
-//            , Authentication authentication) {
-//        Maintenance savedRecord = maintenanceRecordService.addMaintenanceRecord(vehicleId, record);
-//        return ResponseEntity.ok(savedRecord);
-//    }
-
-    @GetMapping("maintenances")
-    public ResponseEntity<List<Maintenance>> getVehicleMaintenanceRecords(
-              @PathVariable Long vehicleId
-            , Authentication authentication) {
-        List<Maintenance> records = maintenanceService.getMaintenanceRecordsByVehicle(vehicleId);
-        return ResponseEntity.ok(records);
-    }
-    
     @GetMapping("/maintenances")
     public ResponseEntity<List<Maintenance>> getMaintenances() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
